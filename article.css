@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+.main {
+    font-family: "EB Garamond", serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+header {
+    margin-top: 150px;
+    text-align: left;
+
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Univers';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: expanded;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+#publish-date {
+    font-family: 'Univers';
+    font-style: italic;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+
+footer {
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.sub {
+    padding-bottom: 30px;
+    font-family: 'Univers';
+    font-weight: 800;
+}
+
+dl {
+    font-family: "EB Garamond", serif;
+    font-size: 13px;
+}
+
+
+.large-block {
+    padding: 200px;
+}
+
+.back-padding {
+    position: fixed;
+    background-color: white;
+}
+
+.back {
+    color: grey;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.image-frame {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    margin-bottom: 20px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.image-frame-art {
+    height: 100%;
+    overflow: hidden; 
+    width: 50%;
+}
+
+.image-frame-art img {
+    width: 100%;
+}
+
+.small {
+    padding-top: 12%;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ max-width: 70%;
+ max-height: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 35px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+
+#article-content  {
+    font-size: 20px;
+}
+
+#fixedLogo img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Adjust this margin as needed */
+    z-index: 999; /* Ensure it appears above other elements */
+    max-width: 6%;
+    max-height: 6%;
+  }
+
+
+
+  
+
+  #fixedLogo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Adjust this margin as needed */
+    z-index: 999; /* Ensure it appears above other elements */
+  }
+
+  .logo {
+    font-family: 'Univers';
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: expanded;
+    color: rgb(47, 255, 0);
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+
+.back-padding  {
+    background-color: transparent;
+    font-family: 'Univers';
+    font-weight: 800;
+  }
+
+  #article-content-video {
+    padding-top: 5%;
+    font-family: 'Univers';
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* This creates a 16:9 aspect ratio for the video frame */
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
