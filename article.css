@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: justify;
-    max-width: 800px;
+    max-width: 750px;
     margin: 20px auto;
     padding: 20px;
 }
@@ -65,7 +65,7 @@ a:hover {
 
 dl {
     font-family: "EB Garamond", serif;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 
@@ -149,7 +149,7 @@ dl {
 
 
 #article-content  {
-    font-size: 20px;
+    font-size: 23px;
 }
 
 #fixedLogo img {
@@ -164,14 +164,13 @@ dl {
 
 
 
-  
-
   #fixedLogo {
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 20px; /* Adjust this margin as needed */
     z-index: 999; /* Ensure it appears above other elements */
+    cursor: pointer;
   }
 
   .logo {

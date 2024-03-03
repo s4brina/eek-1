@@ -74,9 +74,7 @@ height: 300vh;
   font-stretch: expanded;
   position: absolute;
   line-height: 20px;
-  border: 1px solid;
   padding: 15px;
-  border-radius: 2px;
   background-color: rgb(235, 235, 235);
   text-wrap: nowrap;
 }
@@ -158,8 +156,11 @@ height: 300vh;
   bottom: 0;
   right: 0;
   margin: 20px; /* Adjust this margin as needed */
-  z-index: 999; /* Ensure it appears above other elements */
+  z-index: 9999999999; /* Ensure it appears above other elements */
+  cursor: pointer;
 }
+
+
 
 nav {
   font-family: 'Univers';
@@ -183,7 +184,6 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-
   padding: 20px;
 }
 
@@ -262,17 +262,8 @@ a:hover {
 }
 
 
-/* Add this to your existing style.css or in a <style> tag in the head of your HTML */
-.close-btn {
+
+.colored-element {
   position: absolute;
-  top: 0px;
-  right: 5px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #333; /* Adjust close button color as needed */
+  transform-origin: 0 100; /* Set the transform origin to the top-left corner */
 }
-
-.close-btn:hover {
-  color: #007bff; /* Adjust close button color on hover as needed */
-}
-

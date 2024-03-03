@@ -7,6 +7,7 @@ let startOffsetX = 0;
 let startOffsetY = 0;
 let zoomScale = 1;
 
+
 function updateElementPositions(offsetX, offsetY) {
     elements.forEach((element, index) => {
         element.style.left = initialPositions[index].left + offsetX + 'px';
@@ -71,6 +72,7 @@ container.addEventListener('mousemove', (e) => {
         updateElementPositions(offsetX, offsetY);
     }
 });
+
 
 
 // Add similar touch events for mobile devices if needed
@@ -212,3 +214,12 @@ function closeElement5() {
     // Set a flag in localStorage to remember that element5 was closed during the session
     localStorage.setItem('isElement5Closed', 'true');
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const fixedLogo = document.getElementById('fixedLogo');
+
+    fixedLogo.addEventListener('click', function () {
+        location.reload(true); // Pass true to force a hard refresh
+    });
+});
