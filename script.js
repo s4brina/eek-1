@@ -233,21 +233,4 @@ const initialPositions = Array.from(elements).map(element => ({
 
 
 
-// Function to set the initial position of an element
-function setInitialPosition(element, offsetX, offsetY) {
-    const initialPosition = {
-        left: container.clientWidth / 2 - element.clientWidth / 2 + offsetX,
-        top: container.clientHeight / 2 - element.clientHeight / 2 + offsetY
-    };
-
-    element.style.left = `${initialPosition.left}px`;
-    element.style.top = `${initialPosition.top}px`;
-
-    return initialPosition;
-}
-
-// Set initial positions for each image element
-const initialPositionElement1 = setInitialPosition(document.getElementById('element1'), 0, 0);
-const initialPositionElement2 = setInitialPosition(document.getElementById('element2'), 0, 0);
-
 // Repeat for other elements...
