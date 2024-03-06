@@ -172,28 +172,6 @@ function toggleNavigation() {
 }
 
 
-
-
-// Add this to your existing script.js or in a <script> tag in the body of your HTML
-document.addEventListener('DOMContentLoaded', function () {
-    // Check if element5 was closed during the session
-    const isElement5Closed = localStorage.getItem('isElement5Closed');
-    const element5 = document.getElementById('element5');
-
-    if (isElement5Closed === 'true') {
-        element5.style.display = 'none';
-    }
-});
-
-function closeElement5() {
-    const element5 = document.getElementById('element5');
-    element5.style.display = 'none';
-
-    // Set a flag in localStorage to remember that element5 was closed during the session
-    localStorage.setItem('isElement5Closed', 'true');
-}
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const fixedLogo = document.getElementById('fixedLogo');
 
@@ -222,6 +200,16 @@ const initialPositionElement4 = setInitialPosition(element4, 0, 0);
 
 // Set initial position for element5
 const initialPositionElement5 = setInitialPosition(element5, 0, 0);
+
+const initialPositionElement1 = setInitialPosition(element1, -550, 0);
+const initialPositionElement6 = setInitialPosition(element6, -380, -220);
+const initialPositionElement7 = setInitialPosition(element7, -100, -280);
+const initialPositionElement8 = setInitialPosition(element8, 100, -250);
+const initialPositionElement9 = setInitialPosition(element9, 320, -150);
+const initialPositionElement10 = setInitialPosition(element10, 470, -30);
+const initialPositionElement11 = setInitialPosition(element11, 250, 130);
+const initialPositionElement12 = setInitialPosition(element12, -450, 140);
+const initialPositionElement13 = setInitialPosition(element13, -70, 170);
 
 // Store the initial positions
 const initialPositions = Array.from(elements).map(element => ({
