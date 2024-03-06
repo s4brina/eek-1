@@ -7,6 +7,73 @@ let startOffsetX = 0;
 let startOffsetY = 0;
 let zoomScale = 1;
 
+function updateElementPositions(offsetX, offsetY) {
+  elements.forEach((element, index) => {
+    element.style.left = initialPositions[index].left + offsetX + 'px';
+    element.style.top = initialPositions[index].top + offsetY + 'px';
+  });
+}
+
+function updateCanvasSize() {
+  const newWidth = Math.max(minWidth, window.innerWidth);
+  const newHeight = Math.max(minHeight, window.innerHeight);
+
+  container.style.width = `${newWidth}px`;
+  container.style.height = `${newHeight}px`;
+}
+
+container.addEventListener('mousedown', (e) => {
+  isPanning = true;
+  startOffsetX = e.clientX;
+  startOffsetY = e.clientY;
+});
+
+container.addEventListener('mouseup', () => {
+  isPanning = false;
+  // Update the initial positions after each pan
+  initialPositions.forEach((pos, index) => {
+    pos.left = parseInt(elements[index].style.left);
+    pos.top = parseInt(elements[index].style.top);
+  });
+});
+
+container.addEventListener('mousemove', (e) => {
+  if (isPanning) {
+    const offsetX = (e.clientX - startOffsetX) / zoomScale;
+    const offsetY = (e.clientY - startOffsetY) / zoomScale;
+
+    updateElementPositions(offsetX, offsetY);
+  }
+});
+
+// Touch events for mobile devices
+container.addEventListener('touchstart', (e) => {
+  isPanning = true;
+  startOffsetX = e.touches[0].clientX;
+  startOffsetY = e.touches[0].clientY;
+});
+
+container.addEventListener('touchend', () => {
+  isPanning = false;
+  // Update the initial positions after each pan
+  initialPositions.forEach((pos, index) => {
+    pos.left = parseInt(elements[index].style.left);
+    pos.top = parseInt(elements[index].style.top);
+  });
+});
+
+container.addEventListener('touchmove', (e) => {
+  if (isPanning) {
+    const offsetX = (e.touches[0].clientX - startOffsetX) / zoomScale;
+    const offsetY = (e.touches[0].clientY - startOffsetY) / zoomScale;
+
+    updateElementPositions(offsetX, offsetY);
+  }
+});
+
+// Rest of your code...
+
+
 
 function updateElementPositions(offsetX, offsetY) {
     elements.forEach((element, index) => {
