@@ -211,6 +211,18 @@ const initialPositionElement11 = setInitialPosition(element11, 250, 130);
 const initialPositionElement12 = setInitialPosition(element12, -450, 140);
 const initialPositionElement13 = setInitialPosition(element13, -70, 170);
 
+//words
+const initialPositionWordElement1 = setInitialPosition(wordelement1, -650, 0); //a ghost said Collage
+const initialPositionWordElement6 = setInitialPosition(wordelement6, -530, -190); //dba
+const initialPositionWordElement7 = setInitialPosition(wordelement7, -200, -280); //heaven knows what
+const initialPositionWordElement8 = setInitialPosition(wordelement8, 100, -250);
+const initialPositionWordElement9 = setInitialPosition(wordelement9, 320, -150);
+const initialPositionWordElement10 = setInitialPosition(wordelement10, 470, 0); //more things
+const initialPositionWordElement11 = setInitialPosition(wordelement11, 250, 180); //poor thigns
+const initialPositionWordElement12 = setInitialPosition(wordelement12, -600, 180); //chatreuse
+const initialPositionWordElement13 = setInitialPosition(wordelement13, -70, 240); //a ghost said
+
+
 // Store the initial positions
 const initialPositions = Array.from(elements).map(element => ({
     left: parseInt(element.style.left),
