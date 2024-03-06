@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
 
+@font-face {
+    font-family: "Univers 73 Black Extended";
+    src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot");
+    src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.svg#Univers 73 Black Extended")format("svg");
+  }
+  
+  @import url(https://db.onlinewebfonts.com/c/f788f20975c9d1b7be462eddb18abcb9?family=Univers+73+Black+Extended);
+  
 body {
     background-color: rgb(235, 235, 235);
 }
@@ -22,7 +34,7 @@ header {
 
 h1 {
     margin: 0;
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-style: normal;
     font-weight: 800;
     font-stretch: expanded;
@@ -31,7 +43,7 @@ h1 {
 }
 
 #publish-date {
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-style: italic;
     padding: 0px;
     margin: 0px;
@@ -59,7 +71,7 @@ a:hover {
 
 .sub {
     padding-bottom: 30px;
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-weight: 800;
 }
 
@@ -174,7 +186,7 @@ dl {
   }
 
   .logo {
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-style: normal;
     font-weight: 500;
     font-stretch: expanded;
@@ -185,13 +197,13 @@ dl {
 
 .back-padding  {
     background-color: transparent;
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-weight: 800;
   }
 
   #article-content-video {
     padding-top: 5%;
-    font-family: 'Univers';
+    font-family: 'Univers 73 Black Extended';
     font-style: normal;
     font-weight: 500;
   }
