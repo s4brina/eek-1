@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Univers 85 Extra Black Regular';
+  src: url('/Users/sabrinadragani/Downloads/Univers 85 Extra Black Regular/Univers 85 Extra Black Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Univers 73 Black Extended";
+  src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot");
+  src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.svg#Univers 73 Black Extended")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/f788f20975c9d1b7be462eddb18abcb9?family=Univers+73+Black+Extended);
+
 body, html {
   margin: 0;
   padding: 0;
@@ -54,21 +73,19 @@ height: 300vh;
   height: auto;
   font-size: 24px;
   background-color: transparent;
-  font-family: 'Univers';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: expanded;
+  font-family: "Univers 73 Black Extended";
   position: absolute;
   text-align: center;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
+
 
 #element5 {
   width: auto;
   height: auto;
   font-size: 15px;
   background-color: transparent;
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   font-style: normal;
   font-weight: 800;
   font-stretch: expanded;
@@ -98,7 +115,7 @@ height: 300vh;
   left: 0;
   padding: 20px;
   pointer-events: none;
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   font-style: normal;
   font-weight: 800;
   font-stretch: expanded;
@@ -142,14 +159,6 @@ height: 300vh;
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Univers";
-  src: url("Univers.woff#73");
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: expanded;
-}
-
 
 #fixedLogo {
   position: fixed;
@@ -163,7 +172,7 @@ height: 300vh;
 
 
 nav {
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   font-style: normal;
   font-weight: 800;
   font-stretch: expanded;
@@ -207,14 +216,14 @@ a:hover {
   display: none;
   font-size: 15px;
   white-space: nowrap;
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   font-style: normal;
   font-weight: 800;
   font-stretch: expanded;
 }
 
 .logo {
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   font-style: normal;
   font-weight: 500;
   font-stretch: expanded;
@@ -222,7 +231,6 @@ a:hover {
   font-size: 40px;
   margin-bottom: 0px;
 }
-
 
 
 /* Add this to your existing style.css or in a <style> tag in the head of your HTML */
@@ -257,10 +265,9 @@ a:hover {
 
 #indexNavigation {
   z-index: 10000;
-  font-family: 'Univers';
+  font-family: "Univers 73 Black Extended";
   display: none;
 }
-
 
 
 .colored-element {
