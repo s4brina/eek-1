@@ -1,0 +1,270 @@
+
+@font-face {
+  font-family: "Univers 73 Black Extended";
+  src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot");
+  src: url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/f788f20975c9d1b7be462eddb18abcb9.svg#Univers 73 Black Extended")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/f788f20975c9d1b7be462eddb18abcb9?family=Univers+73+Black+Extended);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(235, 235, 235);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:active {
+  cursor: grab; /* Set cursor to crosshair when mouse button is pressed down */
+}
+
+.pan-zoom-container {
+  position: absolute;
+  width: 1000%;
+  margin-top: 50%;
+  padding-top: 500%;
+  padding-BOTTOM: 500%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Media query for small screens */
+  .pan-zoom-container {
+    width: 100%;
+    margin-top: 200%;
+    overflow: hidden;
+  }
+}
+
+.colored-element {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+
+img {
+  width:100PX;
+}
+
+.container {
+  display: flex;
+width: 100vw;
+height: 300vh;
+}
+
+#element4 {
+  width: auto;
+  height: auto;
+  font-size: 24px;
+  background-color: transparent;
+  font-family: "Univers 73 Black Extended";
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+#element5 {
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  background-color: transparent;
+  font-family: "Univers 73 Black Extended";
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: expanded;
+  position: absolute;
+  line-height: 20px;
+  padding: 15px;
+  background-color: rgb(235, 235, 235);
+  text-wrap: nowrap;
+}
+
+#element5 {
+  position: absolute;
+  translate: 0px 80px ;
+}
+
+.outside-element5 {
+  padding-top: 50px;
+}
+
+
+
+
+#cursor {
+  z-index: 100000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  pointer-events: none;
+  font-family: "Univers 73 Black Extended";
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: expanded;
+  font-size: 22px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  min-width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 35px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+
+#fixedLogo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px; /* Adjust this margin as needed */
+  z-index: 9999999999; /* Ensure it appears above other elements */
+  cursor: pointer;
+}
+
+
+
+nav {
+  font-family: "Univers 73 Black Extended";
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: expanded;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  color: black;
+  z-index: 10000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding: 20px;
+}
+
+nav li {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  padding-inline:20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-element {
+  display: none;
+  font-size: 15px;
+  white-space: nowrap;
+  font-family: "Univers 73 Black Extended";
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: expanded;
+}
+
+.logo {
+  font-family: "Univers 73 Black Extended";
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: expanded;
+  color: rgb(47, 255, 0);
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+
+/* Add this to your existing style.css or in a <style> tag in the head of your HTML */
+.navigation-list {
+  position: fixed;
+  top: 100px; /* Adjust the top position as needed */
+  left: 0;
+  background-color: #fff; /* Adjust background color as needed */
+  padding: 50px;
+  display: none; /* Initially hide the navigation list */
+  height: 100vh;
+}
+
+.navigation-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-list ul li {
+  margin-bottom: 5px;
+}
+
+.navigation-list a {
+  text-decoration: none;
+  color: #333; /* Adjust link color as needed */
+}
+
+.navigation-list a:hover {
+  color: #007bff; /* Adjust link color on hover as needed */
+}
+
+#indexNavigation {
+  z-index: 10000;
+  font-family: "Univers 73 Black Extended";
+  display: none;
+}
+
+
+.colored-element {
+  position: absolute;
+  transform-origin: 0 100; /* Set the transform origin to the top-left corner */
+}
