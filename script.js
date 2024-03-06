@@ -25,29 +25,7 @@ function updateCanvasSize() {
     container.style.height = `${newHeight}px`;
 }
 
-// Set initial position for element4
-const initialPositionElement4 = {
-    left: container.clientWidth / 2 - element4.clientWidth / 2,
-    top: container.clientHeight / 2 - element4.clientHeight / 2
-};
 
-// Apply initial position
-element4.style.left = `${initialPositionElement4.left}px`;
-element4.style.top = `${initialPositionElement4.top}px`;
-
-const initialPositionElement5 = {
-    left: container.clientWidth / 2 - element5.clientWidth / 2,
-    top: container.clientHeight / 2 - element5.clientHeight / 2
-};
-
-element5.style.left = `${initialPositionElement5.left}px`;
-element5.style.top = `${initialPositionElement5.top}px`;
-
-// Store the initial positions
-const initialPositions = Array.from(elements).map(element => ({
-    left: parseInt(element.style.left),
-    top: parseInt(element.style.top)
-}));
 
 container.addEventListener('mousedown', (e) => {
     isPanning = true;
@@ -223,3 +201,53 @@ document.addEventListener('DOMContentLoaded', function () {
         location.reload(true); // Pass true to force a hard refresh
     });
 });
+
+
+
+// Function to set the initial position of an element
+function setInitialPosition(element, offsetX, offsetY) {
+    const initialPosition = {
+        left: container.clientWidth / 2 - element.clientWidth / 2 + offsetX,
+        top: container.clientHeight / 2 - element.clientHeight / 2 + offsetY
+    };
+
+    element.style.left = `${initialPosition.left}px`;
+    element.style.top = `${initialPosition.top}px`;
+
+    return initialPosition;
+}
+
+// Set initial position for element4
+const initialPositionElement4 = setInitialPosition(element4, 0, 0);
+
+// Set initial position for element5
+const initialPositionElement5 = setInitialPosition(element5, 0, 0);
+
+// Store the initial positions
+const initialPositions = Array.from(elements).map(element => ({
+    left: parseInt(element.style.left),
+    top: parseInt(element.style.top)
+}));
+
+// Rest of your code remains unchanged...
+
+
+
+// Function to set the initial position of an element
+function setInitialPosition(element, offsetX, offsetY) {
+    const initialPosition = {
+        left: container.clientWidth / 2 - element.clientWidth / 2 + offsetX,
+        top: container.clientHeight / 2 - element.clientHeight / 2 + offsetY
+    };
+
+    element.style.left = `${initialPosition.left}px`;
+    element.style.top = `${initialPosition.top}px`;
+
+    return initialPosition;
+}
+
+// Set initial positions for each image element
+const initialPositionElement1 = setInitialPosition(document.getElementById('element1'), 0, 0);
+const initialPositionElement2 = setInitialPosition(document.getElementById('element2'), 0, 0);
+
+// Repeat for other elements...
