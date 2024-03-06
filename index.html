@@ -44,13 +44,15 @@
     <div id="cursor">X: 0, Y: 0</div>
 
     <script>
-        document.addEventListener('mousemove', (e) => {
-          const cursor = document.getElementById('cursor');
-          const x = (e.pageX - window.innerWidth / 2).toFixed(1);
-          const y = (e.pageY - window.innerHeight / 2).toFixed(1);
-    
-          cursor.textContent = `X: ${x}, Y: ${y}`;
-        });
+document.addEventListener('mousemove', (e) => {
+  const cursor = document.getElementById('cursor');
+  const x = ((e.clientX - window.innerWidth / 2) / zoomScale).toFixed(1);
+  const y = ((e.clientY - window.innerHeight / 2) / zoomScale).toFixed(1);
+
+  cursor.innerHTML = `X: ${parseFloat(x)}, Y: ${parseFloat(y)}`;
+});
+
+
       </script>
  
     <div class="pan-zoom-container" id="panZoomContainer">
@@ -62,7 +64,7 @@
               <img src="a_ghost_said.png" alt="Image 2" style="width: 1600%"></div>
 
 
-              <div class="colored-element text-element" id="element2">
+              <div class="colored-element text-element" id="wordelement1">
                 <div class="text-content" id="textInfo4">A Ghost Said - Collage</div>
             </div>
             </a>
@@ -74,7 +76,7 @@
                 <img src="DBA.jpg" alt="Image 2" style="width: 1300%">
             </div>
             
-            <div class="colored-element text-element" id="element2" style="left: 8000px; top: 8260px; width: 0.5px;">
+            <div class="colored-element text-element" id="wordelement6" style="left: 8000px; top: 8260px; width: 0.5px;">
                 <div class="text-content" id="textInfo2">Diary from the David Beckham National Airport</div>
             </div>
 
@@ -87,7 +89,7 @@
             <img src="chatreuse.png" alt="Image 3">
         </div>
         
-        <div class="colored-element text-element" id="element2" style="left: 7950px; top: 8550px;">
+        <div class="colored-element text-element" id="wordelement12" style="left: 7950px; top: 8550px;">
             <div class="text-content" id="textInfo3">Chatreuse and Other Colours</div>
         </div>
 
@@ -100,7 +102,7 @@
             <img src="felix.png" alt="Image 4" style="width: 1300%">
         </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8500px; top: 8250px;">
+        <div class="colored-element text-element" id="wordelement8" style="left: 8500px; top: 8250px;">
             <div class="text-content" id="textInfo4">Felix Mcnamara</div>
         </div>
     
@@ -112,7 +114,7 @@
             <img src="kratom.jpg" alt="Image 5">
         </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8650px; top: 8550px;">
+        <div class="colored-element text-element" id="wordelement11" style="left: 8650px; top: 8550px;">
             <div class="text-content" id="textInfo4">Poor Things and Other Things</div>
         </div>
         
@@ -124,7 +126,7 @@
             <img src="heaven-knows-what.jpg" alt="Image 3" style="width: 700%">
             </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8300px; top: 8200px;">
+        <div class="colored-element text-element" id="wordelement7" style="left: 8300px; top: 8200px;">
             <div class="text-content" id="textInfo4">Heaven Knows What</div>
         </div>
     
@@ -137,7 +139,7 @@
             <img src="world-of-sleep.png" alt="Image 3">
         </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8700px; top: 8300px;">
+        <div class="colored-element text-element" id="wordelement9" style="left: 8700px; top: 8300px;">
             <div class="text-content" id="textInfo4">A World of Sleep</div>
         </div>
     
@@ -149,7 +151,7 @@
             <img src="pic2.jpg" alt="Image 3">
         </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8300px; top: 8650px;">
+        <div class="colored-element text-element" id="wordelement13" style="left: 8300px; top: 8650px;">
             <div class="text-content" id="textInfo4">A Ghost Said</div>
         </div>
     
@@ -161,7 +163,7 @@
             <img src="Takkab.jpg" alt="Image 3">
         </div>
 
-        <div class="colored-element text-element" id="element3" style="left: 8800px; top: 8450px;">
+        <div class="colored-element text-element" id="wordelement10" style="left: 8800px; top: 8450px;">
             <div class="text-content" id="textInfo4">More Things</div>
         </div>
     

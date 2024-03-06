@@ -74,6 +74,7 @@ container.addEventListener('wheel', (e) => {
 
     // Apply the zoom to the container
     container.style.transform = `scale(${zoomScale})`;
+    
 
     // Update the canvas size and element positions
     updateCanvasSize();
