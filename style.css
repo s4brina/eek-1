@@ -40,7 +40,7 @@ body:active {
 @media only screen and (max-width: 600px) {
   /* Media query for small screens */
   .pan-zoom-container {
-    width: 100%;
+    width: 400%;
     margin-top: 200%;
     overflow: hidden;
   }
@@ -193,6 +193,21 @@ nav ul {
 nav li {
   margin-right: 15px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+nav {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+nav ul {
+  padding: 0px;
+}
+ul {
+  flex-direction: column;
+}
 }
 
 

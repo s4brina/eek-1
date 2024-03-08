@@ -42,6 +42,9 @@ h1 {
     line-height: 50px;
 }
 
+
+  
+
 #publish-date {
     font-family: 'Univers 73 Black Extended';
     font-style: italic;
@@ -231,3 +234,33 @@ dl {
 .highlight {
     color: transparent;
 }
+
+
+@media only screen and (max-width: 767px) {
+
+    main {
+        max-width: 333px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 34px;
+        
+    }
+    #article-content {
+        font-size: 21px;
+    }
+    .logo {
+        display: none;
+    }
+    .highlight {
+        display: none;
+    }
+    .back {
+        background-color: #ebebeb;
+    }
+    .image-frame-art {
+        width: 100%;
+    }
+    
+  
+  }
