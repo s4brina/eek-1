@@ -40,10 +40,17 @@ body:active {
 @media only screen and (max-width: 600px) {
   /* Media query for small screens */
   .pan-zoom-container {
-    width: 400%;
+    width: 1000%;
     margin-top: 200%;
     overflow: hidden;
+    touch-action: manipulation;
   }
+  nav {
+    z-index: 10000; 
+    touch-action: manipulation;
+  }
+  
+  
 }
 
 .colored-element {
@@ -277,7 +284,6 @@ a:hover {
   font-family: "Univers 73 Black Extended";
   display: none;
 }
-
 
 .colored-element {
   position: absolute;
