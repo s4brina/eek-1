@@ -40,7 +40,7 @@ body:active {
 @media only screen and (max-width: 600px) {
   /* Media query for small screens */
   .pan-zoom-container {
-    width: 400%;
+    width: 800%;
     margin-top: 200%;
     overflow: hidden;
     touch-action: manipulation;
