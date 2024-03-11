@@ -299,29 +299,3 @@ const initialPositions = Array.from(elements).map(element => ({
 
 
 
-//hammer.js
-
-const hammer = new Hammer(container);
-
-let scale = 1;
-
-hammer.get('pinch').set({ enable: true });
-hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-hammer.on('pinch', (e) => {
-  // Update the scale based on the pinch gesture
-  scale = Math.max(0.5, Math.min(scale * e.scale, 3));
-
-  // Apply the scale to the container
-  container.style.transform = `scale(${scale})`;
-});
-
-hammer.on('pan', (e) => {
-  // Update the position based on the pan gesture
-  const offsetX = e.deltaX / scale;
-  const offsetY = e.deltaY / scale;
-
-  // Apply the pan to the container
-  container.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
-});
-s
