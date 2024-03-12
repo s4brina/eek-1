@@ -172,6 +172,9 @@ height: 300vh;
 
 #group {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
 }
 
 
