@@ -161,7 +161,7 @@ height: 300vh;
 }
 
 
-#fixedLogo {
+#fixedLogo{
   position: fixed;
   bottom: 0;
   right: 0;
@@ -170,6 +170,13 @@ height: 300vh;
   cursor: pointer;
 }
 
+#group {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  z-index: 999999999;
+}
 
 
 nav {
