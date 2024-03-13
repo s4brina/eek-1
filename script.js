@@ -6,69 +6,91 @@ let isPanning = false;
 let startOffsetX = 0;
 let startOffsetY = 0;
 let zoomScale = 1;
+let initialDistance = 0;
 
 function updateElementPositions(offsetX, offsetY) {
-  elements.forEach((element, index) => {
-    element.style.left = initialPositions[index].left + offsetX + 'px';
-    element.style.top = initialPositions[index].top + offsetY + 'px';
-  });
+    elements.forEach((element, index) => {
+        element.style.left = initialPositions[index].left + offsetX + 'px';
+        element.style.top = initialPositions[index].top + offsetY + 'px';
+    });
 }
 
 function updateCanvasSize() {
-  const newWidth = Math.max(minWidth, window.innerWidth);
-  const newHeight = Math.max(minHeight, window.innerHeight);
+    const newWidth = Math.max(minWidth, window.innerWidth);
+    const newHeight = Math.max(minHeight, window.innerHeight);
 
-  container.style.width = `${newWidth}px`;
-  container.style.height = `${newHeight}px`;
+    container.style.width = `${newWidth}px`;
+    container.style.height = `${newHeight}px`;
 }
 
 container.addEventListener('mousedown', (e) => {
-  isPanning = true;
-  startOffsetX = e.clientX;
-  startOffsetY = e.clientY;
+    isPanning = true;
+    startOffsetX = e.clientX;
+    startOffsetY = e.clientY;
 });
 
 container.addEventListener('mouseup', () => {
-  isPanning = false;
-  // Update the initial positions after each pan
-  initialPositions.forEach((pos, index) => {
-    pos.left = parseInt(elements[index].style.left);
-    pos.top = parseInt(elements[index].style.top);
-  });
+    isPanning = false;
+    // Update the initial positions after each pan
+    initialPositions.forEach((pos, index) => {
+        pos.left = parseInt(elements[index].style.left);
+        pos.top = parseInt(elements[index].style.top);
+    });
 });
 
 container.addEventListener('mousemove', (e) => {
-  if (isPanning) {
-    const offsetX = (e.clientX - startOffsetX) / zoomScale;
-    const offsetY = (e.clientY - startOffsetY) / zoomScale;
+    if (isPanning) {
+        const offsetX = (e.clientX - startOffsetX) / zoomScale;
+        const offsetY = (e.clientY - startOffsetY) / zoomScale;
 
-    updateElementPositions(offsetX, offsetY);
-  }
+        updateElementPositions(offsetX, offsetY);
+    }
 });
 
-// Touch events for mobile devices
 container.addEventListener('touchstart', (e) => {
-  isPanning = true;
-  startOffsetX = e.touches[0].clientX;
-  startOffsetY = e.touches[0].clientY;
+    if (e.touches.length === 2) {
+        initialDistance = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+        );
+    } else {
+        isPanning = true;
+        startOffsetX = e.touches[0].clientX;
+        startOffsetY = e.touches[0].clientY;
+    }
 });
 
 container.addEventListener('touchend', () => {
-  isPanning = false;
-  // Update the initial positions after each pan
-  initialPositions.forEach((pos, index) => {
-    pos.left = parseInt(elements[index].style.left);
-    pos.top = parseInt(elements[index].style.top);
-  });
+    isPanning = false;
+    // Update the initial positions after each pan
+    initialPositions.forEach((pos, index) => {
+        pos.left = parseInt(elements[index].style.left);
+        pos.top = parseInt(elements[index].style.top);
+    });
 });
 
 container.addEventListener('touchmove', (e) => {
-  if (isPanning) {
-    const offsetX = (e.touches[0].clientX - startOffsetX) / zoomScale;
-    const offsetY = (e.touches[0].clientY - startOffsetY) / zoomScale;
+    if (isPanning && e.touches.length === 1) {
+        const offsetX = (e.touches[0].clientX - startOffsetX) / zoomScale;
+        const offsetY = (e.touches[0].clientY - startOffsetY) / zoomScale;
 
-    updateElementPositions(offsetX, offsetY);
-  }
+        updateElementPositions(offsetX, offsetY);
+    } else if (e.touches.length === 2) {
+        const currentDistance = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+        );
+
+        const deltaDistance = currentDistance - initialDistance;
+        const scaleDelta = deltaDistance * 0.01; // Adjust this multiplier for sensitivity
+
+        zoomScale += scaleDelta;
+        zoomScale = Math.max(0.5, Math.min(zoomScale, 3)); // Limit zoom scale
+
+        container.style.transform = `scale(${zoomScale})`;
+
+        initialDistance = currentDistance;
+    }
 });
 
 // Rest of your code...
