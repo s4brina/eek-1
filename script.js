@@ -180,17 +180,19 @@ window.addEventListener('resize', () => {
 });
 
 
-
 function openModal(imagePath) {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('expandedImage');
-
-  modal.style.display = 'block';
-  modalImg.src = imagePath;
-
-  // Disable scrolling on the background content
-  document.body.style.overflow = 'hidden';
-}
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImage');
+  
+    modal.style.display = 'block';
+    modalImg.src = imagePath;
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+  
 
 function closeModal() {
   const modal = document.getElementById('imageModal');
@@ -321,3 +323,5 @@ const initialPositions = Array.from(elements).map(element => ({
 
 
 
+
+  
