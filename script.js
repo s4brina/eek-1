@@ -288,32 +288,33 @@ function setInitialPosition(element, offsetX, offsetY) {
 }
 
 // Set initial position for element4
-const initialPositionElement4 = setInitialPosition(element4, 0, 0);
+
 
 // Set initial position for element5
 const initialPositionElement5 = setInitialPosition(element5, 0, 0);
 
-const initialPositionElement1 = setInitialPosition(element1, -550, 0);
-const initialPositionElement6 = setInitialPosition(element6, -380, -220);
-const initialPositionElement7 = setInitialPosition(element7, -100, -280);
-const initialPositionElement8 = setInitialPosition(element8, 100, -250);
-const initialPositionElement9 = setInitialPosition(element9, 320, -150);
-const initialPositionElement10 = setInitialPosition(element10, 470, -30);
-const initialPositionElement11 = setInitialPosition(element11, 250, 130);
-const initialPositionElement12 = setInitialPosition(element12, -450, 140);
-const initialPositionElement13 = setInitialPosition(element13, -70, 170);
+const initialPositionElement1 = setInitialPosition(element1, -550, 0);//a ghost said Collage
+const initialPositionElement6 = setInitialPosition(element6, -380, -220);//dba
+const initialPositionElement7 = setInitialPosition(element7, -100, -280);//heaven knows what
+const initialPositionElement8 = setInitialPosition(element8, 100, -50);//felix mcnamara
+const initialPositionElement9 = setInitialPosition(element9, 150, -200);//a world of sleep
+const initialPositionElement10 = setInitialPosition(element10, 470, -30);//more things
+const initialPositionElement11 = setInitialPosition(element11, 250, 130);//poor thigns
+const initialPositionElement12 = setInitialPosition(element12, -300, 10); //chatreuse
+const initialPositionElement13 = setInitialPosition(element13, -70, -100);//a ghost said
+const initialPositionElement14 = setInitialPosition(element14, -100, 150);//charlie
 
 //words
 const initialPositionWordElement1 = setInitialPosition(wordelement1, -650, 0); //a ghost said Collage
 const initialPositionWordElement6 = setInitialPosition(wordelement6, -530, -190); //dba
 const initialPositionWordElement7 = setInitialPosition(wordelement7, -200, -280); //heaven knows what
-const initialPositionWordElement8 = setInitialPosition(wordelement8, 100, -250);
-const initialPositionWordElement9 = setInitialPosition(wordelement9, 320, -150);
+const initialPositionWordElement8 = setInitialPosition(wordelement8, 100, 0); //felix mcnamara
+const initialPositionWordElement9 = setInitialPosition(wordelement9, 110, -200);// a world of sleep
 const initialPositionWordElement10 = setInitialPosition(wordelement10, 470, 0); //more things
-const initialPositionWordElement11 = setInitialPosition(wordelement11, 250, 180); //poor thigns
-const initialPositionWordElement12 = setInitialPosition(wordelement12, -600, 180); //chatreuse
-const initialPositionWordElement13 = setInitialPosition(wordelement13, -70, 240); //a ghost said
-
+const initialPositionWordElement11 = setInitialPosition(wordelement11, 200, 180); //poor thigns
+const initialPositionWordElement12 = setInitialPosition(wordelement12, -400, 30); //chatreuse
+const initialPositionWordElement13 = setInitialPosition(wordelement13, -70, -50); //a ghost said
+const initialPositionWordElement14 = setInitialPosition(wordelement14, -130, 200); //charlie
 
 // Store the initial positions
 const initialPositions = Array.from(elements).map(element => ({
