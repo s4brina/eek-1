@@ -309,8 +309,8 @@ const initialPositionWordElement6 = setInitialPosition(wordelement6, -530, -190)
 const initialPositionWordElement7 = setInitialPosition(wordelement7, -200, -280); //heaven knows what
 const initialPositionWordElement8 = setInitialPosition(wordelement8, 100, 0); //felix mcnamara
 const initialPositionWordElement9 = setInitialPosition(wordelement9, 110, -200);// a world of sleep
-const initialPositionWordElement10 = setInitialPosition(wordelement10, 470, 0); //more things
-const initialPositionWordElement11 = setInitialPosition(wordelement11, 200, 180); //poor thigns
+const initialPositionWordElement10 = setInitialPosition(wordelement10, 400, 0); //more things
+const initialPositionWordElement11 = setInitialPosition(wordelement11, -200, 180); //poor thigns
 const initialPositionWordElement12 = setInitialPosition(wordelement12, -400, 30); //chatreuse
 const initialPositionWordElement13 = setInitialPosition(wordelement13, -70, -50); //a ghost said
 // Store the initial positions
