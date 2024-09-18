@@ -298,11 +298,10 @@ const initialPositionElement6 = setInitialPosition(element6, -380, -220);//dba
 const initialPositionElement7 = setInitialPosition(element7, -100, -280);//heaven knows what
 const initialPositionElement8 = setInitialPosition(element8, 100, -50);//felix mcnamara
 const initialPositionElement9 = setInitialPosition(element9, 150, -200);//a world of sleep
-const initialPositionElement10 = setInitialPosition(element10, 470, -30);//more things
-const initialPositionElement11 = setInitialPosition(element11, 250, 130);//poor thigns
+const initialPositionElement10 = setInitialPosition(element10, 350, -30);//more things
+const initialPositionElement11 = setInitialPosition(element11, -200, 130);//poor thigns
 const initialPositionElement12 = setInitialPosition(element12, -300, 10); //chatreuse
 const initialPositionElement13 = setInitialPosition(element13, -70, -100);//a ghost said
-const initialPositionElement14 = setInitialPosition(element14, -100, 150);//charlie
 
 //words
 const initialPositionWordElement1 = setInitialPosition(wordelement1, -650, 0); //a ghost said Collage
@@ -314,8 +313,6 @@ const initialPositionWordElement10 = setInitialPosition(wordelement10, 470, 0); 
 const initialPositionWordElement11 = setInitialPosition(wordelement11, 200, 180); //poor thigns
 const initialPositionWordElement12 = setInitialPosition(wordelement12, -400, 30); //chatreuse
 const initialPositionWordElement13 = setInitialPosition(wordelement13, -70, -50); //a ghost said
-const initialPositionWordElement14 = setInitialPosition(wordelement14, -130, 200); //charlie
-
 // Store the initial positions
 const initialPositions = Array.from(elements).map(element => ({
     left: parseInt(element.style.left),
